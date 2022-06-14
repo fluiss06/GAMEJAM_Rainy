@@ -39,8 +39,8 @@
 extends KinematicBody2D
 
 var vel = 200
-var fuerza_salto = 200
-var gravedad = 7
+export var fuerza_salto = 200
+export var gravedad = 7
 var direccion = Vector2.ZERO
 
 var direccion_salto = Vector2.ZERO
@@ -86,6 +86,7 @@ func _physics_process(delta):
 		direccion.x = 0
 		stop = true
 		mostrar_puntos()
+		
 	if Input.is_action_just_released("salto_b"):
 		direccion.x = 0
 		stop = false
@@ -95,6 +96,7 @@ func _physics_process(delta):
 		direccion = direccion_salto.normalized() * fuerza_salto * 3
 		print("DIRRR ", direccion)
 		angulo_salto = deg2rad(90)
+		dir_angulo = -0.1
 		
 	print(direccion)
 
