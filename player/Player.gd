@@ -42,12 +42,12 @@ func _physics_process(delta):
 	direccion = move_and_slide_with_snap(direccion ,Vector2.DOWN,Vector2.UP)
 	
 	
-	if Input.is_action_pressed("salto_b"):
+	if Input.is_action_pressed("salto_b") and is_on_floor():
 		direccion.x = lerp(direccion.x, 0, 0.06)
 		stop = true
 		mostrar_puntos()
 	
-	if Input.is_action_just_released("salto_b"):
+	if Input.is_action_just_released("salto_b") and is_on_floor():
 		direccion.x = 0
 		t = 0
 		ocultar_puntos()
