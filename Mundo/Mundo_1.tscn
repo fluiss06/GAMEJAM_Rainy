@@ -4,6 +4,7 @@
 [ext_resource path="res://Parallax_efecto/ParallaxBackground.tscn" type="PackedScene" id=2]
 
 [node name="Mundo_1" type="Node2D"]
+position = Vector2( 31, -44 )
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )
