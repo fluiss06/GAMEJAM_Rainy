@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Nivel_1/tiles/Blue tiles/tileBlue_03.png" type="Texture" id=1]
 [ext_resource path="res://Nivel_1/tiles/Blue tiles/tileBlue_08.png" type="Texture" id=2]
@@ -8,6 +8,8 @@
 [ext_resource path="res://Nivel_1/tiles/Blue tiles/tileBlue_06.png" type="Texture" id=6]
 [ext_resource path="res://Parallax_efecto/ParallaxBackground.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Nivel_1/tileMap.gd" type="Script" id=8]
+[ext_resource path="res://player/Player.tscn" type="PackedScene" id=9]
+[ext_resource path="res://player/punto.tscn" type="PackedScene" id=10]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
@@ -164,3 +166,11 @@ tile_data = PoolIntArray( 69, 0, 0, 70, 2, 0, 149, 0, 0, 150, 2, 0, 65706, 0, 0,
 script = ExtResource( 8 )
 
 [node name="ParallaxBackground" parent="." instance=ExtResource( 7 )]
+
+[node name="Player" parent="." instance=ExtResource( 9 )]
+position = Vector2( 323, 333 )
+scale = Vector2( 3.36, 2.2 )
+fuerza_salto = 300
+gravedad = 4
+
+[node name="Punto" parent="." instance=ExtResource( 10 )]
